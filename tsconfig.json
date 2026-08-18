@@ -1,6 +1,6 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "scripts/**/*", "vite.config.ts"],
-  "exclude": ["node_modules", "dist"],
+  "include": ["client/src/**/*", "scripts/**/*", "vite.config.ts"],
+  "exclude": ["node_modules", "dist", "*.tsx", "*.ts", "!vite.config.ts"],
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
@@ -16,10 +16,9 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
-    "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["./client/src/*"],
+      "@/*": ["./client/src/*"]
     }
   }
 }
